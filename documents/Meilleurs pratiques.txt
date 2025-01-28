@@ -1,0 +1,7 @@
+Meilleures pratiques
+Méthodologie Agile
+Sprint de 2 semaines avec revues régulières.
+Daily Stand-ups à 9h tous les jours.
+Code Review
+Pull requests obligatoires.
+Pair programming recommandé pour les features complexes.

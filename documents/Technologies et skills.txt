@@ -1,0 +1,10 @@
+Technologies et outils
+Stack principale
+Front-end : React, Vue.js.
+Back-end : Node.js, Spring Boot.
+Data : Python, Spark, Airflow.
+DevOps : Kubernetes, Jenkins, Terraform.
+Outils de collaboration
+Slack pour la communication instantanée.
+Jira pour le suivi des tâches.
+Confluence pour la documentation.

@@ -1,0 +1,12 @@
+Équipe et organisation
+Structure
+Notre organisation repose sur une structure agile, avec des équipes dédiées à des domaines spécifiques :
+
+Équipe Produit : Focus sur les besoins clients et la définition des fonctionnalités.
+Équipe Développement : Responsable de l'implémentation technique.
+Équipe Data : Spécialistes en analyse de données et IA.
+Équipe DevOps : Garantit la stabilité et l'intégration continue.
+Membres clés
+Alice Dupont (CTO) : Responsable technique.
+Jean Martin (Product Manager) : Vision produit.
+Sophie Legrand (Lead Data Scientist) : Modèles prédictifs et AI.

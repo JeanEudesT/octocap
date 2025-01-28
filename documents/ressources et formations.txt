@@ -1,0 +1,7 @@
+Ressources et formations
+Formations internes
+Initiation à Kubernetes : Chaque trimestre.
+Data Science avancée : Formation mensuelle.
+Formations recommandées
+Coursera - Deep Learning Specialization
+Pluralsight - Terraform Fundamentals

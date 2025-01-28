@@ -1,0 +1,11 @@
+Page d'accueil
+Bienvenue sur l'espace Confluence de notre entreprise !
+
+Cet espace a pour objectif de centraliser les informations clés pour permettre à nos équipes de collaborer efficacement et de partager leurs connaissances. Voici les grandes catégories disponibles :
+
+Équipe et organisation : Tout ce qu'il faut savoir sur nos équipes.
+Projets en cours : Suivi des projets, roadmaps, et livrables.
+Meilleures pratiques : Guides méthodologiques et bonnes pratiques.
+Technologies et outils : Nos choix technologiques et tutoriels d'utilisation.
+Ressources et formations : Pour accompagner la montée en compétence.
+Rétro et feedback : Un espace pour partager vos retours et idées.

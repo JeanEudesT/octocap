@@ -1,0 +1,9 @@
+Projets en cours
+1. Plateforme Client 360
+Description : Une solution permettant d'avoir une vision consolidée des interactions avec nos clients.
+Technos : React, Node.js, MongoDB.
+Avancement : Phase 2 - Intégration avec les outils CRM.
+2. Migration Cloud
+Description : Déplacement des infrastructures on-premises vers AWS.
+Technos : Terraform, Kubernetes, Docker.
+Avancement : Phase 1 - Audit des systèmes existants.
