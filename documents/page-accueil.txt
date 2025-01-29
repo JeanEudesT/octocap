@@ -1,11 +1,44 @@
-Page d'accueil
-Bienvenue sur l'espace Confluence de notre entreprise !
+Page Confluence : Page d'Accueil d'Octo
+Bienvenue sur le Wiki Octo 👋
+Bienvenue dans l’espace de documentation et de collaboration d’Octo. Ce wiki est votre source centrale d’informations sur nos projets, nos processus et nos outils. Il a été conçu pour vous aider à travailler efficacement, collaborer avec vos collègues et découvrir nos meilleures pratiques.
 
-Cet espace a pour objectif de centraliser les informations clés pour permettre à nos équipes de collaborer efficacement et de partager leurs connaissances. Voici les grandes catégories disponibles :
+🔎 Astuce : Utilisez la barre de recherche ou explorez les sections ci-dessous pour trouver rapidement ce dont vous avez besoin.
 
-Équipe et organisation : Tout ce qu'il faut savoir sur nos équipes.
-Projets en cours : Suivi des projets, roadmaps, et livrables.
-Meilleures pratiques : Guides méthodologiques et bonnes pratiques.
-Technologies et outils : Nos choix technologiques et tutoriels d'utilisation.
-Ressources et formations : Pour accompagner la montée en compétence.
-Rétro et feedback : Un espace pour partager vos retours et idées.
+1. À Propos d'Octo 🌟
+Notre Vision et Mission : Découvrez notre raison d’être et nos objectifs stratégiques dans la page Qui sommes-nous ?.
+Organisation de l’entreprise : Retrouvez l’organigramme interactif d’Octo sur la page Équipe Octo.
+Politique RH : Consultez nos règles internes et les réponses aux questions fréquentes sur la page Ressources Humaines.
+2. Sections Clés 📚
+2.1 Projets et Équipes
+Découvrez les projets que nous menons et identifiez les équipes qui y travaillent :
+
+Projets en cours : Consultez le détail des initiatives sur Projets Octo.
+Fiches des équipes : Apprenez à connaître nos équipes sur Les équipes Octo.
+2.2 Ressources Techniques
+Retrouvez ici tout ce qu’il faut pour bien démarrer ou approfondir vos connaissances sur les outils et méthodologies utilisés chez Octo :
+
+Pratiques de développement : Suivez les recommandations sur Développement chez Octo.
+Guide des API : Accédez aux spécifications sur Documentation API.
+Environnements et accès : Configurez vos outils en suivant les instructions dans Outils et Environnements.
+2.3 Processus et Méthodologies
+Comprenez nos flux de travail et méthodes de collaboration :
+
+Méthodologie Agile : Découvrez nos pratiques Agile et Scrum sur Méthodes de travail.
+Gestion des incidents : Lisez nos processus sur Gestion des Incidents.
+Flux CI/CD : Consultez notre pipeline d’intégration et déploiement continu sur Pipeline CI/CD.
+3. Dernières Actualités 📰
+Janvier 2025 : Nouvelle plateforme de gestion des API en production. Consultez les détails sur API Gateway.
+Décembre 2024 : Migration vers GitHub Actions terminée avec succès. En savoir plus sur CI/CD avec GitHub Actions.
+Novembre 2024 : Formation Docker et Kubernetes organisée par l’équipe Ops. Replay disponible sur Formation Kubernetes.
+4. Liens Utiles 🔗
+Accès rapide aux outils :
+
+Jira Octo
+GitHub Octo
+Slack Octo
+Suivi des incidents : Consultez le tableau en temps réel sur Statut des Incidents.
+
+FAQ interne : Trouvez des réponses rapides sur FAQ Octo.
+
+5. Besoin d’Aide ? 🤔
+Si vous avez des questions ou des suggestions pour améliorer ce wiki, contactez-nous sur help@octo.com ou utilisez notre formulaire de feedback : Donnez votre avis.

@@ -1,8 +1,80 @@
-Rétro et feedback
-Comment contribuer ?
-Participez aux rétrospectives d'équipe tous les vendredis.
-Utilisez ce Confluence pour documenter vos expériences et retours.
-Feedback anonyme
-Formulaire Google pour soumettre vos idées ou retours en toute confidentialité.
+Page Confluence : Rétrospectives et Feedbacks chez Octo 🔄
+Bienvenue dans l'Espace Rétrospectives et Feedbacks
+Les rétrospectives et feedbacks sont essentiels pour l'amélioration continue et la collaboration au sein des équipes. Cette page regroupe des outils, des templates, et des bonnes pratiques pour faciliter vos sessions et collecter efficacement des retours.
 
-Merci de contribuer activement à cet espace ! Ensemble, nous construisons une organisation agile et innovante.
+Pour toute question ou assistance, contactez les personnes mentionnées dans chaque section.
+
+1. Pourquoi Faire des Rétrospectives et Collecter des Feedbacks ?
+Les rétrospectives permettent à votre équipe de :
+
+Identifier ce qui fonctionne bien et ce qui doit être amélioré.
+Renforcer la communication et la collaboration.
+Implémenter des actions concrètes pour progresser.
+Les feedbacks sont un moyen de :
+
+Construire un environnement de travail transparent et constructif.
+Favoriser la croissance personnelle et professionnelle de chacun.
+Évaluer les pratiques et processus pour les ajuster si nécessaire.
+📩 Contact : @Emma Dubois (Coach Agile)
+
+2. Ressources pour les Rétrospectives
+2.1 Templates pour vos Rétrospectives
+Template Rétrospective Classique (Start/Stop/Continue) : Télécharger ici.
+Template Rétrospective Agile (Mad/Sad/Glad) : Télécharger ici.
+Template Rétrospective Sprint (What Went Well/What Didn’t/Actions) : Accéder ici.
+📩 Contact : @Hugo Laurent (Chef de Projet Agile)
+
+2.2 Boîte à Outils pour les Rétrospectives
+Icebreakers et Activités Préparatoires : Voir les idées ici
+Outils en Ligne :
+Miro : Créez des tableaux collaboratifs interactifs.
+FunRetro : Pour structurer vos rétrospectives en ligne.
+Checklist Préparation Rétrospective : Télécharger ici.
+📩 Contact : @Sophie André (Facilitatrice Agile)
+
+3. Collecte de Feedbacks
+3.1 Feedback d’Équipe
+Template Feedback d’Équipe : Accéder au modèle.
+Utilisé pour les sessions de feedbacks structurés entre collègues.
+Checklist Feedback Constructif : Télécharger ici.
+📩 Contact : @Camille Lemoine (Coach Organisationnelle)
+
+3.2 Feedback Individuel
+Outil de Feedback 360° : Accéder à l’outil.
+Collecte de feedbacks anonymes pour favoriser l’amélioration personnelle.
+Guide Feedback en 4 Étapes : Télécharger ici.
+📩 Contact : @Paul Lambert (Responsable RH)
+
+3.3 Formulaires et Collecte Anonyme
+Formulaire Feedback Anonyme : Soumettre un feedback.
+Idéal pour les suggestions générales ou les retours constructifs confidentiels.
+Tableau de Suivi des Feedbacks : Voir le tableau.
+📩 Contact : @Sabrina Cohen (Responsable Feedbacks et Rétrospectives)
+
+4. Bonnes Pratiques
+4.1 Pour les Rétrospectives
+Fréquence recommandée : À la fin de chaque sprint (ou au moins une fois par mois).
+Durée idéale : 1h à 1h30 selon la taille de l’équipe.
+Focus : Un petit nombre de points à améliorer pour rester actionnable.
+4.2 Pour les Feedbacks
+Clarté et Objectivité : Parlez des faits, pas des jugements personnels.
+Respect et Bienveillance : Orientez le feedback vers l’amélioration.
+Actions Concrètes : Proposez des pistes ou des solutions.
+📩 Contact : @Emma Dubois (Coach Agile)
+
+5. Rétrospectives Passées
+Sprint 34 - Équipe Nova : Compte-rendu.
+Décembre 2024 - Rétrospective Mensuelle Globale : Lire le résumé.
+Formation Docker - Feedbacks Collectés : Résultats ici.
+📩 Contact : @Julien Morel (Facilitateur Agile pour Nova)
+
+6. Besoin d’Aide ou d’Assistance ?
+Si vous souhaitez :
+
+Organiser une rétrospective et avez besoin d’un facilitateur.
+Collecter des feedbacks pour une situation particulière.
+Proposer une nouvelle méthode ou outil.
+Contactez @Emma Dubois ou utilisez le formulaire suivant : Demander de l’aide.
+
+7. Contribuer et Partager vos Idées
+Vous avez une idée pour enrichir cet espace ou une nouvelle méthodologie à proposer ? Partagez vos suggestions via Proposer une amélioration.

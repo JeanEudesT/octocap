@@ -1,9 +1,64 @@
-Projets en cours
-1. Plateforme Client 360
-Description : Une solution permettant d'avoir une vision consolidée des interactions avec nos clients.
-Technos : React, Node.js, MongoDB.
-Avancement : Phase 2 - Intégration avec les outils CRM.
-2. Migration Cloud
-Description : Déplacement des infrastructures on-premises vers AWS.
-Technos : Terraform, Kubernetes, Docker.
-Avancement : Phase 1 - Audit des systèmes existants.
+Page Confluence : Projets en Cours chez Octo 🚀
+Bienvenue sur la page des projets en cours
+Cette page regroupe tous les projets actuellement en développement chez Octo, leurs objectifs, leurs avancées, et les membres impliqués. Cliquez sur un projet pour accéder à plus de détails et suivre son évolution.
+
+1. Liste des Projets Actifs
+1.1 Project Nova ✨
+Description : Développement d'une nouvelle plateforme SaaS pour automatiser la gestion des campagnes marketing.
+Objectif principal : Lancer une version bêta pour les clients d'ici Q2 2025.
+Avancement : En phase de développement back-end (70 % complété).
+Tags :
+👩‍💻 @Alice Dupont (Chef de projet)
+🧑‍💻 @Martin Leclerc (Lead Dev Back-end)
+👨‍🎨 @Sophie André (UX/UI Designer)
+👨‍💻 @Julien Morel (Développeur Front-end)
+Prochaines étapes :
+
+Finalisation des endpoints API.
+Tests utilisateurs pour valider les maquettes interactives.
+Intégration des systèmes de paiement Stripe.
+1.2 Octo Cloud Optimizer ☁️
+Description : Création d’un outil interne pour optimiser l’utilisation des ressources cloud et réduire les coûts AWS.
+Objectif principal : Réduire les coûts d'infrastructure de 20 % sur une période de 6 mois.
+Avancement : Phase pilote avec 2 équipes (40 % complété).
+Tags :
+🧑‍💼 @Paul Lambert (Product Owner)
+👩‍💻 @Emma Gérard (Développeuse DevOps)
+👨‍💻 @Théo Brunet (Ingénieur Cloud)
+Prochaines étapes :
+
+Déployer les premiers rapports d’analyse pour l’équipe de R&D.
+Collecter les retours sur l’interface utilisateur actuelle.
+1.3 App Mobile Octo+ 📱
+Description : Développement d’une application mobile pour améliorer l’expérience client sur les offres Octo+.
+Objectif principal : Lancer l’application sur iOS et Android avec une fonctionnalité clé de suivi des abonnements.
+Avancement : Conception UI terminée, début du développement mobile (25 % complété).
+Tags :
+👨‍💼 @Hugo Laurent (Chef de projet)
+👩‍🎨 @Clara Benoit (Designer mobile)
+👩‍💻 @Nina Lefèvre (Développeuse Flutter)
+👨‍💻 @Antoine Marchal (Développeur Flutter)
+Prochaines étapes :
+
+Implémentation des services API pour la gestion des abonnements.
+Tester les prototypes sur un groupe de bêta-testeurs internes.
+1.4 Data Insights pour Octo Analytics 📊
+Description : Extension de notre outil Octo Analytics avec de nouvelles visualisations pour les données clients.
+Objectif principal : Ajouter 5 nouveaux tableaux de bord analytiques pour Q3 2025.
+Avancement : Analyse des besoins terminée, début du développement (30 % complété).
+Tags :
+🧑‍💼 @Sabrina Cohen (Product Manager)
+👩‍💻 @Lucas Dubois (Data Engineer)
+👩‍🔬 @Camille Lemoine (Scientifique de données)
+👨‍💻 @Maxime Perrin (Développeur Full Stack)
+Prochaines étapes :
+
+Développer les connecteurs avec Google BigQuery et Snowflake.
+Effectuer les tests de performance sur les gros volumes de données.
+2. Projets Terminés ou Archivés
+Retrouvez les projets finalisés ou archivés dans la section Projets Complétés. Ces documents incluent des rétrospectives et des leçons apprises.
+
+3. Besoin de Contribuer ? 🤝
+Vous voulez contribuer à un projet ou avez une idée de nouvelle initiative ? Contactez directement les chefs de projet ou utilisez le formulaire Proposer un Projet.
+
+Cette page est mise à jour régulièrement. Pensez à revenir pour suivre l’évolution des projets et voir les nouvelles initiatives en cours ! 😊

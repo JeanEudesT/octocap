@@ -1,7 +1,79 @@
-Ressources et formations
-Formations internes
-Initiation à Kubernetes : Chaque trimestre.
-Data Science avancée : Formation mensuelle.
-Formations recommandées
-Coursera - Deep Learning Specialization
-Pluralsight - Terraform Fundamentals
+Page Confluence : Ressources et Formations chez Octo 🎓
+Bienvenue dans l'Espace Ressources et Formations
+Cette page regroupe toutes les ressources pour monter en compétence, améliorer vos pratiques et découvrir de nouveaux outils. Que vous soyez un développeur, un chef de projet ou un membre de l’équipe opérationnelle, vous trouverez ici des formations adaptées à vos besoins.
+
+Pour toute question ou suggestion, n’hésitez pas à contacter les responsables mentionnés dans chaque section.
+
+1. Ressources Disponibles 📚
+1.1 Guides Techniques et Documentation
+Guide de Développement chez Octo : Accéder au guide
+Standards de codage, processus de revue de code, CI/CD, etc.
+Documentation API : Accéder à la doc
+Inclut les spécifications OpenAPI pour nos services principaux.
+Environnements et Outils Internes : Voir le guide
+Installation, configuration et accès (GitHub, Jenkins, AWS, etc.).
+📩 Contact : @Lucas Martin (Responsable Technique)
+
+1.2 Modèles et Templates
+Template de User Stories : Télécharger ici
+Modèle de Rétrospective Agile : Accéder au modèle
+Checklists de Déploiement : Voir ici
+📩 Contact : @Emma Dubois (Responsable Agile)
+
+2. Programmes de Formation 🏫
+2.1 Formations Techniques
+Introduction à Docker et Kubernetes
+
+Description : Formation de 2 jours sur la conteneurisation avec Docker et l’orchestration avec Kubernetes.
+Prochaine session : 15 et 16 février 2025.
+Formateurs : @Julien Morel (Ingénieur Cloud) et @Sophie André (DevOps).
+Inscription : S'inscrire ici.
+Atelier CI/CD avec GitHub Actions
+
+Description : Configuration et optimisation des pipelines CI/CD pour vos projets.
+Prochaine session : 5 mars 2025.
+Formateur : @Paul Lambert (DevOps Senior).
+Inscription : S'inscrire ici.
+2.2 Formations Méthodologies
+Pratiques Agile et Scrum
+
+Description : Formation complète sur les frameworks Agile, les rôles, et la gestion des sprints.
+Prochaine session : 20 mars 2025.
+Formateurs : @Emma Dubois (Coach Agile).
+Inscription : S'inscrire ici.
+Leadership et Gestion de Projet
+
+Description : Formation axée sur la gestion d’équipes et la planification de projets complexes.
+Prochaine session : 10 avril 2025.
+Formateur : @Hugo Laurent (Chef de Projet Senior).
+Inscription : S'inscrire ici.
+2.3 Formations Soft Skills
+Communication et Collaboration d’Équipe
+
+Description : Améliorez vos compétences en communication interpersonnelle et travail en équipe.
+Prochaine session : 8 février 2025.
+Formateur : @Camille Lemoine (Coach Organisationnelle).
+Inscription : S'inscrire ici.
+Gestion du Temps et Productivité
+
+Description : Apprenez à prioriser vos tâches et à gérer efficacement votre charge de travail.
+Prochaine session : 25 février 2025.
+Formateur : @Antoine Marchal (Responsable Opérations).
+Inscription : S'inscrire ici.
+3. Accès aux Ressources Externes 🌐
+Plateforme d’e-learning Pluralsight : Créer un compte ici
+Accès O’Reilly (e-books) : Obtenez vos accès ici
+Formations AWS certifiées : Explorez le catalogue
+📩 Contact : @Lucas Martin (Responsable Technique)
+
+4. Suggestion de Nouvelle Formation ou Ressource 💡
+Si vous avez des idées de formation ou besoin d’un support spécifique, soumettez vos suggestions via le formulaire suivant : Proposer une formation.
+
+📩 Contact : @Sabrina Cohen (Responsable Formation).
+
+5. Suivi et Évaluation 📝
+Après chaque formation, nous vous invitons à remplir un court questionnaire de feedback sur Évaluation Formation.
+
+Votre avis nous aide à améliorer continuellement nos programmes ! 😊
+
+Cette page est régulièrement mise à jour pour inclure de nouvelles ressources et formations. Restez connectés et n’hésitez pas à vous inscrire aux prochaines sessions ! 🚀

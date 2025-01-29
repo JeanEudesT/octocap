@@ -1,10 +1,122 @@
-Technologies et outils
-Stack principale
-Front-end : React, Vue.js.
-Back-end : Node.js, Spring Boot.
-Data : Python, Spark, Airflow.
-DevOps : Kubernetes, Jenkins, Terraform.
-Outils de collaboration
-Slack pour la communication instantanée.
-Jira pour le suivi des tâches.
-Confluence pour la documentation.
+Page Confluence : Technologie et Skills chez Octo 💻
+Bienvenue dans l’Espace Technologie et Skills
+Chez Octo, l’innovation repose sur des technologies de pointe et des équipes compétentes. Cette page regroupe :
+
+Une vue d’ensemble des technologies utilisées chez Octo.
+Les compétences clés nécessaires pour exceller dans vos projets.
+Les ressources disponibles pour développer vos compétences.
+Pour toute question, contactez les responsables mentionnés dans chaque section.
+
+1. Technologies Utilisées chez Octo 🛠️
+1.1 Développement Front-end
+Frameworks : React, Vue.js, Angular.
+Langages : JavaScript (ES6+), TypeScript.
+Librairies complémentaires : Redux, Tailwind CSS, Framer Motion.
+📩 Contact : @Julien Morel (Lead Front-End)
+
+1.2 Développement Back-end
+Langages : Java, Python, Node.js, Kotlin.
+Frameworks : Spring Boot, Express.js, FastAPI.
+Bases de données : PostgreSQL, MongoDB, Redis.
+📩 Contact : @Lucas Martin (Responsable Back-End)
+
+1.3 Cloud et DevOps
+Providers : AWS, Azure, Google Cloud.
+Outils CI/CD : GitHub Actions, Jenkins, ArgoCD.
+Conteneurs : Docker, Kubernetes.
+Infrastructure-as-Code : Terraform, Ansible.
+📩 Contact : @Emma Gérard (Lead DevOps)
+
+1.4 Data et Intelligence Artificielle
+Outils de data engineering : Apache Kafka, Airflow, Snowflake.
+Librairies IA/ML : TensorFlow, PyTorch, Scikit-learn.
+Outils BI : Tableau, Power BI, Metabase.
+📩 Contact : @Camille Lemoine (Data Scientist)
+
+1.5 Technologies Transverses
+Gestion de projet : Jira, Confluence, Notion.
+Communication : Slack, MS Teams.
+Contrôle de version : Git (GitHub, GitLab).
+📩 Contact : @Paul Lambert (Responsable Outils Collaboratifs)
+
+2. Skills Clés chez Octo 🎯
+2.1 Compétences Techniques
+Développement : Connaissances avancées des frameworks front-end/back-end et des architectures microservices.
+Cloud Computing : Conception et gestion d’infrastructures scalables.
+Data Engineering : Création de pipelines de données performants et robustes.
+2.2 Compétences Méthodologiques
+Agilité : Maîtrise des frameworks Scrum, Kanban et SAFE.
+CI/CD : Automatisation des déploiements avec des pipelines fiables.
+Design UX/UI : Création de parcours utilisateur intuitifs et visuellement attractifs.
+2.3 Compétences Humaines (Soft Skills)
+Communication efficace et écoute active.
+Résolution de problèmes et esprit critique.
+Collaboration inter-équipes et gestion des conflits.
+📩 Contact : @Sabrina Cohen (Responsable Développement des Compétences)
+
+3. Développement de vos Compétences 📈
+3.1 Formations Internes
+Atelier Kubernetes pour Développeurs
+
+Description : Introduction à l’orchestration des conteneurs avec Kubernetes.
+Prochaine session : 10 mars 2025.
+Formateur : @Lucas Martin.
+Inscription : S'inscrire ici.
+Formation React Avancé
+
+Description : Optimisations des performances et bonnes pratiques avec React.
+Prochaine session : 22 février 2025.
+Formateur : @Julien Morel.
+Inscription : S'inscrire ici.
+3.2 Plateformes et Certifications Externes
+AWS Certification : En savoir plus.
+Google Data Engineer : Détails ici.
+Pluralsight : Accès pour Octo.
+📩 Contact : @Emma Gérard (Référente Cloud)
+
+3.3 Pair Programming et Mentorat
+Sessions Pair Programming : Planifiez une session avec un expert interne.
+Programme de Mentorat : Faites-vous accompagner pour monter en compétence.
+📩 Contact : @Hugo Laurent (Responsable Mentorat)
+
+4. Communauté et Partage des Connaissances 🤝
+4.1 Groupes d’Intérêt Techniques
+Front-end Guild : Partage des bonnes pratiques front-end.
+📩 Contact : @Sophie André
+Cloud & DevOps Guild : Échange sur les innovations en cloud et DevOps.
+📩 Contact : @Paul Lambert
+4.2 Lunch & Learn
+Présentations informelles pendant la pause déjeuner.
+Prochaine session : "Introduction à Terraform" par @Emma Gérard (12 février 2025).
+4.3 Hackathons Internes
+Prochain Hackathon : "Construire une application full-stack en 48h"
+Participants : Équipes transverses composées de développeurs, designers, et chefs de projet.
+Prix à gagner : Bons cadeaux, abonnements à des plateformes tech, et autres surprises.
+📩 Contact pour s'inscrire : @Julien Morel (Organisateur Hackathon).
+
+5. Technologies et Skills : Évolution à Long Terme 🛠️
+Chez Octo, nous avons une vision claire pour rester à la pointe de la technologie et des compétences :
+
+Veille Technologique Continue :
+
+Utilisation d’outils comme Dev.to, Medium, et Stack Overflow Trends.
+Participation à des conférences internationales comme AWS re:Invent et React Conf.
+Stratégie de Formation à Long Terme :
+
+Plan annuel de montée en compétences pour aligner les besoins des équipes avec les technologies émergentes.
+Certifications prioritaires pour 2025 : Kubernetes, Data Engineering avancé, Machine Learning Ops.
+Collaboration avec des Experts Externes :
+
+Inviter des speakers reconnus pour partager leurs connaissances avec nos équipes.
+📩 Responsable de la stratégie d'évolution technologique : @Camille Lemoine
+
+6. Ressources Complémentaires
+Wiki des Technologies Utilisées : Accéder ici.
+Base de Connaissances sur les Skills : Explorer ici.
+Roadmap de Développement des Compétences : Voir la roadmap.
+Si vous souhaitez ajouter une nouvelle ressource ou proposer une amélioration, utilisez le formulaire suivant : Contribuer.
+
+7. Besoin d’Aide ou d’Informations Supplémentaires ?
+Pour des questions techniques ou des ressources spécifiques, contactez les référents mentionnés dans les sections ci-dessus.
+Si vous ne savez pas par où commencer ou avez des suggestions, écrivez à @Paul Lambert (Responsable Outils Collaboratifs) ou utilisez le canal Slack #tech-skills-octo.
+

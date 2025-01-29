@@ -31,7 +31,18 @@ def vectoriser_texte(texte: str) -> list:
     """Vectorise un texte avec SentenceTransformers."""
     return modelPourEmbedding.encode(texte).tolist()
 
-'''
+
+# Function to split text into chunks
+def split_text(text, chunk_size=500, chunk_overlap=20):
+    chunks = []
+    start = 0
+    while start < len(text):
+        end = start + chunk_size
+        chunks.append(text[start:end])
+        start = end - chunk_overlap
+    return chunks
+
+
 # Charger les documents
 documents = []
 for filename in os.listdir("documents"):
@@ -40,25 +51,31 @@ for filename in os.listdir("documents"):
             content = f.read()
             documents.append(content)
 
+chunked_documents = []
+# Création de chunks
+for doc in documents:
+    for chunk in split_text(doc):
+        chunked_documents.append(chunk)
+
 
 print("Debut de la vectorisation")
 # Vectoriser et stocker dans ChromaDB
-for idx, doc in enumerate(documents):
-    print(f'{idx}/{len(documents)}')
-    embedding = vectoriser_texte(doc)
+for idx, chunk in enumerate(chunked_documents):
+    print(f'{idx}/{len(chunked_documents)} ---- {chunk}')
+    embedding = vectoriser_texte(chunk)
+    print("AU SUIVANT")
     collection.add(
         ids=[str(idx)],
         embeddings=[embedding],
-        documents=[doc]
+        documents=[chunk]
     )
-print("Fin de la vectorisation")'''
+print("Fin de la vectorisation")
 
 
 # --------------------------------------------
 # Étape 3 : Interface CLI avec recherche RAG
 # --------------------------------------------
-
-def rechercher_documents(question: str, k=10) -> list:
+def rechercher_documents(question: str, k=3) -> list:
     """Recherche les documents pertinents avec ChromaDB."""
     embedding = vectoriser_texte(question)
     results = collection.query(

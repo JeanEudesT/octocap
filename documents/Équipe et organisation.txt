@@ -1,12 +1,96 @@
-Équipe et organisation
-Structure
-Notre organisation repose sur une structure agile, avec des équipes dédiées à des domaines spécifiques :
+Page Confluence : Équipe et Organisation chez Octo 🏢
+Bienvenue dans l'Espace Équipe et Organisation
+Chez Octo, nous croyons que chaque membre de l’équipe joue un rôle essentiel dans notre réussite collective. Cette page vous permet de découvrir les membres de l’équipe, leurs rôles, compétences, et les projets auxquels ils contribuent. Vous y trouverez également des informations sur la structure organisationnelle, ainsi que les meilleures façons de collaborer avec chaque équipe.
 
-Équipe Produit : Focus sur les besoins clients et la définition des fonctionnalités.
-Équipe Développement : Responsable de l'implémentation technique.
-Équipe Data : Spécialistes en analyse de données et IA.
-Équipe DevOps : Garantit la stabilité et l'intégration continue.
-Membres clés
-Alice Dupont (CTO) : Responsable technique.
-Jean Martin (Product Manager) : Vision produit.
-Sophie Legrand (Lead Data Scientist) : Modèles prédictifs et AI.
+Pour toute question ou clarification, n’hésitez pas à contacter directement les personnes mentionnées dans chaque section.
+
+1. Structure Organisationnelle d’Octo 📊
+Octo est structurée autour de plusieurs équipes transverses, chaque équipe étant responsable d’un domaine clé de l’entreprise. Voici les principales équipes et leurs rôles :
+
+Équipe Technique : Responsable du développement des solutions, de l'architecture et de la maintenance des systèmes.
+Équipe Produit : S'occupe de la gestion de projet, de la planification et des livraisons produit.
+Équipe Data : Gère les données, l'intelligence artificielle et l’analyse de données.
+Équipe RH et Operations : Responsable de la gestion des talents, des ressources humaines et des opérations internes.
+Équipe Commerciale : S'occupe des ventes, de la gestion de la relation client et de la stratégie marketing.
+2. Membre de l’Équipe et Détails des Rôles 👥
+2.1 Équipe Technique 🛠️
+Lucas Martin – Lead Back-End Developer
+
+Compétences : Java, Spring Boot, Node.js, PostgreSQL, Docker, Kubernetes.
+Projets en cours : Architecture microservices pour la plateforme client, amélioration de la scalabilité des API.
+Contact : @Lucas Martin (Lead Back-End Developer).
+Julien Morel – Lead Front-End Developer
+
+Compétences : React, Vue.js, TypeScript, Redux, Tailwind CSS.
+Projets en cours : Développement d'interfaces utilisateur pour l’application mobile, amélioration de l’accessibilité.
+Contact : @Julien Morel (Lead Front-End Developer).
+Sophie André – DevOps Engineer
+
+Compétences : AWS, Jenkins, Terraform, Ansible, Docker.
+Projets en cours : Mise en place de pipelines CI/CD, gestion des environnements cloud.
+Contact : @Sophie André (DevOps Engineer).
+2.2 Équipe Produit 📦
+Hugo Laurent – Chef de Projet Senior
+
+Compétences : Agile, Scrum, gestion de projet, planification de sprint.
+Projets en cours : Gestion des livraisons de nouvelles fonctionnalités, coordination entre les équipes produit et technique.
+Contact : @Hugo Laurent (Chef de Projet Senior).
+Emma Dubois – Product Owner
+
+Compétences : Analyse des besoins utilisateurs, rédaction de User Stories, gestion de backlog.
+Projets en cours : Définition des fonctionnalités prioritaires pour la prochaine version de la plateforme.
+Contact : @Emma Dubois (Product Owner).
+Camille Lemoine – Designer UX/UI
+
+Compétences : Figma, Sketch, Adobe XD, prototypes interactifs, tests utilisateurs.
+Projets en cours : Conception de l’interface utilisateur pour l’application web, refonte de l'expérience utilisateur sur les produits existants.
+Contact : @Camille Lemoine (Designer UX/UI).
+2.3 Équipe Data 📊
+Paul Lambert – Data Engineer
+
+Compétences : SQL, Python, Apache Kafka, Spark, Snowflake.
+Projets en cours : Création et optimisation des pipelines de données, mise en place d’une architecture de données centralisée.
+Contact : @Paul Lambert (Data Engineer).
+Antoine Marchal – Data Scientist
+
+Compétences : Machine Learning, TensorFlow, Scikit-learn, analyse prédictive, modélisation statistique.
+Projets en cours : Développement de modèles prédictifs pour l’analyse de comportement client, optimisation des algorithmes de recommandation.
+Contact : @Antoine Marchal (Data Scientist).
+2.4 Équipe RH et Operations 💼
+Sabrina Cohen – Responsable RH
+
+Compétences : Gestion des talents, développement des compétences, recrutement.
+Projets en cours : Recrutement pour les postes techniques et non-techniques, gestion du programme de mentorat interne.
+Contact : @Sabrina Cohen (Responsable RH).
+Lucas Dupont – Operations Manager
+
+Compétences : Gestion des ressources, optimisation des processus, coordination inter-équipes.
+Projets en cours : Gestion des ressources internes et externes pour les projets en cours, mise en place de nouveaux outils de gestion de projet.
+Contact : @Lucas Dupont (Operations Manager).
+2.5 Équipe Commerciale 📈
+Maxime Lefevre – Responsable Commercial
+
+Compétences : Vente B2B, gestion de comptes clients, stratégie commerciale.
+Projets en cours : Développement de nouvelles relations commerciales avec des entreprises dans le secteur tech, stratégie d'acquisition client.
+Contact : @Maxime Lefevre (Responsable Commercial).
+Isabelle Martin – Marketing Manager
+
+Compétences : Stratégie marketing, gestion de campagnes, analyse des données marketing.
+Projets en cours : Mise en place de campagnes de marketing digital, gestion des relations publiques et des événements.
+Contact : @Isabelle Martin (Marketing Manager).
+3. Collaboration et Communication entre Équipes 🤝
+Chez Octo, nous privilégions la communication ouverte et l’interaction entre les différentes équipes pour favoriser la collaboration. Voici quelques points clés pour travailler efficacement avec chaque équipe :
+
+Réunions Hebdomadaires : Chaque équipe organise une réunion hebdomadaire pour faire le point sur les progrès et les défis.
+Kanban et Jira : Utilisation des outils de gestion de projet comme Jira pour le suivi des tâches et des sprints.
+Slack : Nos discussions quotidiennes se déroulent sur des canaux dédiés sur Slack, tels que #tech-team, #product-team, #data-science, etc.
+Événements Inter-équipes : Des événements comme les "Lunch & Learn" sont organisés pour favoriser le partage de connaissances entre les équipes.
+4. Ressources et Outils de Collaboration 🛠️
+Confluence : Accéder à notre espace de documentation interne.
+Jira : Accéder à nos boards Jira.
+Slack : Rejoindre nos canaux Slack.
+GitHub : Explorer notre code source.
+5. Contactez-nous ! 📬
+Si vous avez des questions spécifiques ou souhaitez en savoir plus sur un membre de l’équipe ou un projet particulier, n'hésitez pas à contacter les responsables des équipes via leurs profils Confluence ou Slack.
+
+Merci de contribuer à cette page pour favoriser une meilleure collaboration entre les équipes chez Octo ! 🚀
