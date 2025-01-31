@@ -3,6 +3,7 @@ from openai import OpenAI
 from chromadb import Client, Settings
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
+import ollama
 
 load_dotenv()
 
@@ -16,7 +17,7 @@ print("setup model")
 # --------------------------------------------
 # Étape 1 : Vectorisation des documents
 # --------------------------------------------
-modelPourEmbedding = SentenceTransformer('all-MiniLM-L6-v2')
+modelPourEmbedding = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 print("done")
 # --------------------------------------------
 # Étape 2 : Configuration de ChromaDB
@@ -24,6 +25,9 @@ print("done")
 
 print("setup db")
 dbClient = Client(Settings(persist_directory="./chroma_db", is_persistent=True))
+#dbClient.delete_collection("documents")
+
+
 collection = dbClient.get_or_create_collection(name="documents")
 print("done")
 
@@ -33,7 +37,7 @@ def vectoriser_texte(texte: str) -> list:
 
 
 # Function to split text into chunks
-def split_text(text, chunk_size=500, chunk_overlap=20):
+def split_text(text, chunk_size=1500, chunk_overlap=20):
     chunks = []
     start = 0
     while start < len(text):
@@ -61,7 +65,7 @@ for doc in documents:
 print("Debut de la vectorisation")
 # Vectoriser et stocker dans ChromaDB
 for idx, chunk in enumerate(chunked_documents):
-    print(f'{idx}/{len(chunked_documents)} ---- {chunk}')
+    print(f'In progress... {idx}/{len(chunked_documents)}')
     embedding = vectoriser_texte(chunk)
     print("AU SUIVANT")
     collection.add(
@@ -82,24 +86,39 @@ def rechercher_documents(question: str, k=3) -> list:
         query_embeddings=[embedding],
         n_results=k
     )
-    print("results", results)
+    #print("results", results,"\n")
     return results['documents'][0]
 
 
 def generer_reponse(question: str, contexte: list) -> str:
     """Génère une réponse avec OpenAI."""
-    prompt = f"Contexte :\n{'-'.join(contexte)}\n\nQuestion : {question}\nRéponse :"
+    prompt = f"""
+        Tu es un assistant intelligent spécialisé dans l'analyse et la synthèse d'informations à partir de documents.
+        Tu dois fournir des réponses précises et détaillées basées uniquement sur les documents fournis, en évitant toute invention.
+        Fais moi une réponse courte 
 
-    print('-'.join(contexte))
-'''    response = clientOpenAI.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system",
-             "content": "Vous êtes un assistant qui répond aux questions basées sur les documents fournis."},
-            {"role": "user", "content": prompt}
-        ]
+        Documents fournis :
+        {documents}
+        
+        Question de l'utilisateur :
+        {question}
+        
+        Réponse :
+        Contexte :\n{'-'.join(contexte)}\n\nQuestion : {question}\nRéponse :"""
+
+    #print('\n\n'.join(contexte))
+    '''response = ollama.generate(model='llama3.2',
+                               prompt=prompt, stream=True)'''
+    stream = ollama.chat(
+        model='llama3.2',
+        messages=[{'role': 'user', 'content': prompt}],
+        stream=True,
     )
-    return response.choices[0].message.content'''
+
+    for chunk in stream:
+        print(chunk['message']['content'], end='', flush=True)
+
+    return "Fin"
 
 
 
