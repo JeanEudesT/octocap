@@ -1,43 +1,14 @@
 import os
-from openai import OpenAI
 from chromadb import Client, Settings
 from sentence_transformers import SentenceTransformer
-from dotenv import load_dotenv
 import ollama
 
-load_dotenv()
 
-# Configuration OpenAI
-api_key = os.getenv("OPENAI_API_KEY")
-
-clientOpenAI = OpenAI(api_key=api_key)
-print("GO")
-
-print("setup model")
-# --------------------------------------------
-# Étape 1 : Vectorisation des documents
-# --------------------------------------------
-modelPourEmbedding = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
-print("done")
-# --------------------------------------------
-# Étape 2 : Configuration de ChromaDB
-# --------------------------------------------
-
-print("setup db")
-dbClient = Client(Settings(persist_directory="./chroma_db", is_persistent=True))
-#dbClient.delete_collection("documents")
+def vectorize_text(model_embedding, text: str) -> list:
+    return model_embedding.encode(text).tolist()
 
 
-collection = dbClient.get_or_create_collection(name="documents")
-print("done")
-
-def vectoriser_texte(texte: str) -> list:
-    """Vectorise un texte avec SentenceTransformers."""
-    return modelPourEmbedding.encode(texte).tolist()
-
-
-# Function to split text into chunks
-def split_text(text, chunk_size=1500, chunk_overlap=20):
+def split_text(text, chunk_size=1500, chunk_overlap=20) -> list:
     chunks = []
     start = 0
     while start < len(text):
@@ -47,68 +18,54 @@ def split_text(text, chunk_size=1500, chunk_overlap=20):
     return chunks
 
 
-# Charger les documents
-documents = []
-for filename in os.listdir("documents"):
-    if filename.endswith(".txt"):
-        with open(f"documents/{filename}", "r", encoding="utf-8") as f:
-            content = f.read()
-            documents.append(content)
-
-chunked_documents = []
-# Création de chunks
-for doc in documents:
-    for chunk in split_text(doc):
-        chunked_documents.append(chunk)
+def load_documents(path="documents", ext=".txt") -> list:
+    documents = []
+    for filename in os.listdir(path):
+        if filename.endswith(ext):
+            with open(f"{path}/{filename}", "r", encoding="utf-8") as f:
+                content = f.read()
+                documents.append(content)
+    return documents
 
 
-print("Debut de la vectorisation")
-# Vectoriser et stocker dans ChromaDB
-for idx, chunk in enumerate(chunked_documents):
-    print(f'In progress... {idx}/{len(chunked_documents)}')
-    embedding = vectoriser_texte(chunk)
-    print("AU SUIVANT")
-    collection.add(
-        ids=[str(idx)],
-        embeddings=[embedding],
-        documents=[chunk]
-    )
-print("Fin de la vectorisation")
+def create_chunks(documents) -> list:
+    chunked_documents = []
+    for doc in documents:
+        for chunk in split_text(doc):
+            chunked_documents.append(chunk)
+    return chunked_documents
+
+
+def persist_vectorized_documents(persistance, model_embedding, chunked_documents):
+    for idx, chunk in enumerate(chunked_documents):
+        embedding = vectorize_text(model_embedding, chunk)
+        persistance.add(
+            ids=[str(idx)],
+            embeddings=[embedding],
+            documents=[chunk]
+        )
 
 
 # --------------------------------------------
 # Étape 3 : Interface CLI avec recherche RAG
 # --------------------------------------------
-def rechercher_documents(question: str, k=3) -> list:
-    """Recherche les documents pertinents avec ChromaDB."""
-    embedding = vectoriser_texte(question)
-    results = collection.query(
-        query_embeddings=[embedding],
+def search_documents(persistance, embedded_query: str, k=3) -> list:
+    results = persistance.query(
+        query_embeddings=[embedded_query],
         n_results=k
     )
-    #print("results", results,"\n")
+    # print("results", results,"\n")
     return results['documents'][0]
 
 
-def generer_reponse(question: str, contexte: list) -> str:
-    """Génère une réponse avec OpenAI."""
-    prompt = f"""
+def build_prompt(query: str, context: list):
+    return f"""
         Tu es un assistant intelligent spécialisé dans l'analyse et la synthèse d'informations à partir de documents.
         Tu dois fournir des réponses précises et détaillées basées uniquement sur les documents fournis, en évitant toute invention.
-        Fais moi une réponse courte 
+        Fais moi une réponse courte\nQuestion de l'utilisateur :\n{query}\nRéponse :\nContexte :\n{'-'.join(context)}\n\nQuestion : {query}\nRéponse :"""
 
-        Documents fournis :
-        {documents}
-        
-        Question de l'utilisateur :
-        {question}
-        
-        Réponse :
-        Contexte :\n{'-'.join(contexte)}\n\nQuestion : {question}\nRéponse :"""
 
-    #print('\n\n'.join(contexte))
-    '''response = ollama.generate(model='llama3.2',
-                               prompt=prompt, stream=True)'''
+def generate_response(prompt: str):
     stream = ollama.chat(
         model='llama3.2',
         messages=[{'role': 'user', 'content': prompt}],
@@ -118,24 +75,25 @@ def generer_reponse(question: str, contexte: list) -> str:
     for chunk in stream:
         print(chunk['message']['content'], end='', flush=True)
 
-    return "Fin"
+
+model_embedding = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
+chromadb_client = Client(Settings(persist_directory="./chroma_db", is_persistent=True))
+# chromadb_client.delete_collection("documents")
+collection = chromadb_client.get_or_create_collection(name="documents")
+
+documents = load_documents("documents", ".txt")
+chunked_documents = create_chunks(documents)
+persist_vectorized_documents(collection, model_embedding, chunked_documents)
 
 
+while True:
+    query = input("\nPrompt : ")
 
+    if query.lower() == "exit":
+        break
 
-# --------------------------------------------
-# Boucle interactive
-# --------------------------------------------
-print("Assistant RAG - Tapez 'exit' pour quitter\n")
+    embedded_query = vectorize_text(model_embedding, query)
+    context = search_documents(collection, embedded_query)
+    generate_response(build_prompt(query, context))
 
-question = ""
-
-while question.lower() != "exit":
-    question = input("\nQuestion : ")
-
-    # Recherche des documents
-    contexte = rechercher_documents(question)
-
-    # Génération de la réponse
-    reponse = generer_reponse(question, contexte)
-    print(f"\nRéponse : {reponse}\n")
+    print("Fin")
