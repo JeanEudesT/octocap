@@ -1,6 +1,6 @@
-import os
-from chromadb import Client, Settings
 from sentence_transformers import SentenceTransformer
+from domain.usecases.prepare_rag_from_path import PrepareRagFromPath
+from infrastructure.embedding_repository import EmbeddingRepository
 import ollama
 
 
@@ -8,52 +8,8 @@ def vectorize_text(model_embedding, text: str) -> list:
     return model_embedding.encode(text).tolist()
 
 
-def split_text(text, chunk_size=1500, chunk_overlap=20) -> list:
-    chunks = []
-    start = 0
-    while start < len(text):
-        end = start + chunk_size
-        chunks.append(text[start:end])
-        start = end - chunk_overlap
-    return chunks
-
-
-def load_documents(path="documents", ext=".txt") -> list:
-    documents = []
-    for filename in os.listdir(path):
-        if filename.endswith(ext):
-            with open(f"{path}/{filename}", "r", encoding="utf-8") as f:
-                content = f.read()
-                documents.append(content)
-    return documents
-
-
-def create_chunks(documents) -> list:
-    chunked_documents = []
-    for doc in documents:
-        for chunk in split_text(doc):
-            chunked_documents.append(chunk)
-    return chunked_documents
-
-
-def persist_vectorized_documents(persistance, model_embedding, chunked_documents):
-    for idx, chunk in enumerate(chunked_documents):
-        embedding = vectorize_text(model_embedding, chunk)
-        persistance.add(
-            ids=[str(idx)],
-            embeddings=[embedding],
-            documents=[chunk]
-        )
-
-
-# --------------------------------------------
-# Étape 3 : Interface CLI avec recherche RAG
-# --------------------------------------------
-def search_documents(persistance, embedded_query: str, k=3) -> list:
-    results = persistance.query(
-        query_embeddings=[embedded_query],
-        n_results=k
-    )
+def search_documents(persistance, embedded_query: str) -> list:
+    results = persistance.query(embedded_query)
     # print("results", results,"\n")
     return results['documents'][0]
 
@@ -75,25 +31,38 @@ def generate_response(prompt: str):
     for chunk in stream:
         print(chunk['message']['content'], end='', flush=True)
 
+embeddingRepository = EmbeddingRepository()
 
-model_embedding = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
-chromadb_client = Client(Settings(persist_directory="./chroma_db", is_persistent=True))
-# chromadb_client.delete_collection("documents")
-collection = chromadb_client.get_or_create_collection(name="documents")
+def main():
+    while True:
+        option = input("\nChoose your option (1: prompt, 2: prepare the RAGzmoket: ")
+        if option.lower() == "exit":
+            break
 
-documents = load_documents("documents", ".txt")
-chunked_documents = create_chunks(documents)
-persist_vectorized_documents(collection, model_embedding, chunked_documents)
+        if option.lower() == "1":
+            prompt()
+
+        if option.lower() == "2":
+            prepare()
 
 
-while True:
-    query = input("\nPrompt : ")
+def prepare():
+    prepareRagFromPathUsecase = PrepareRagFromPath(embeddingRepository)
+    prepareRagFromPathUsecase.execute("documents", "txt")
 
-    if query.lower() == "exit":
-        break
+def prompt():
+    while True:
+        query = input("\nPrompt : ")
 
-    embedded_query = vectorize_text(model_embedding, query)
-    context = search_documents(collection, embedded_query)
-    generate_response(build_prompt(query, context))
+        if query.lower() == "exit":
+            break
 
-    print("Fin")
+        embedded_query = vectorize_text(SentenceTransformer('paraphrase-multilingual-mpnet-base-v2'), query)
+        context = search_documents(embeddingRepository, embedded_query)
+        generate_response(build_prompt(query, context))
+
+
+if __name__ == '__main__':
+    main()
+
+
