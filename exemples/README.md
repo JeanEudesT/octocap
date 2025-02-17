@@ -41,5 +41,3 @@ d'une entreprise (Pages confluences par exemple)
 | Quels sont les outils utilisés pour la gestion de projet ?    |           |  |             |
 | coucou qsdqd |sdsd
 
-
-

@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer
 class Rag:
     _documents: [] = []
     _chunked_documents: [] = []
-    _embedding_model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
+    _embedding_model = SentenceTransformer('intfloat/multilingual-e5-large')
     _embeddings: [] = []
 
     def load_documents(self, path="documents", ext=".txt") -> list:
@@ -17,7 +17,7 @@ class Rag:
         return self._documents
 
     def create_chunks(self) -> list:
-        def split_text(text, chunk_size=1500, chunk_overlap=20) -> list:
+        def split_text(text, chunk_size=600, chunk_overlap=100) -> list:
             chunks = []
             start = 0
             while start < len(text):

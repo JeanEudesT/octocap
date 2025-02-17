@@ -18,7 +18,9 @@ class EmbeddingRepository:
             )
 
     def query(self, embedded_query):
-        return self._collection.query(
+        result = self._collection.query(
             query_embeddings=[embedded_query],
             n_results=3
         )
+        print("resultat de chromadb ", result)
+        return result
